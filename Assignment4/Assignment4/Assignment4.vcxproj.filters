@@ -15,15 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\Box Sync\Data Structures and Algorithms\A4\infix.h">
+    <ClInclude Include="infix.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Box Sync\Data Structures and Algorithms\A4\assign4_driver.cpp">
+    <ClCompile Include="assign4_driver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Box Sync\Data Structures and Algorithms\A4\infix.cpp">
+    <ClCompile Include="infix.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

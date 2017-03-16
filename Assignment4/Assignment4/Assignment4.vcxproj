@@ -18,6 +18,13 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="infix.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="assign4_driver.cpp" />
+    <ClCompile Include="infix.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{11BD2294-BAB7-4596-BCA2-DA95244BC4D2}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -145,13 +152,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\Box Sync\Data Structures and Algorithms\A4\infix.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Box Sync\Data Structures and Algorithms\A4\assign4_driver.cpp" />
-    <ClCompile Include="..\..\..\..\..\Box Sync\Data Structures and Algorithms\A4\infix.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
