@@ -27,6 +27,7 @@ public:
 	
 private:
 	std::string infx;
+	std::string sym;
 	std::string pfx;
 	std::stack <std::string> pStack;
 

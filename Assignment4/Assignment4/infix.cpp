@@ -17,11 +17,18 @@ Infix::Infix() {
 
 }
 
-Infix::Infix(string) {
+Infix::Infix(string exp) {
+	infx = exp;
+	for(int i = 0; i < exp.length(); i++) {
+		if (exp[i] == ' ') {
+			
+		}
+		else sym[i] = exp[i];
+	}
 
 }
 
-void Infix::setInfix(string) {
+void Infix::setInfix(string exp) {
 
 }
 
