@@ -91,7 +91,7 @@ void Infix::clear() {
 
 void Infix::convertToPostFix() {
 	int size = infx.length();
-	bool pushStack = false;
+	int precedence = 0;
 	int j = 0;
 	sym = infx;
 
@@ -128,17 +128,50 @@ void Infix::convertToPostFix() {
 		if (sym[i] == '^') {
 			pStack.push(sym[i]);
 			operators++;
+			precedence = 3;
 		}
+
 		if (sym[i] == '*' || sym[i] == '/') {
+
 			pStack.push(sym[i]);
 			operators++;
+			precedence = 2;
 		}
+
 		if (sym[i] == '+' || sym[i] == '-') {
+			if (precedence > 1) {
+				if (pStack.top() == '(') {
+					pStack.pop();
+				}
+				else {
+					pfx += pStack.top();
+					pfx += ' ';
+					pStack.pop();
+
+				}
+			}
 			pStack.push(sym[i]);
 			operators++;
+			precedence = 1;
 		}
+
 	}
-	//Add spaces to pfx for output and append operators
+	//Append all remaining operators
+	while (pStack.empty() != true) {
+		if (pStack.empty()) {
+			break;
+		}
+		if (pStack.top() == '(') {
+			pStack.pop();
+		}
+		else {
+			pfx += pStack.top();
+			pfx += ' ';
+			pStack.pop();
+
+		}
+
+	}
 	 
 }
 

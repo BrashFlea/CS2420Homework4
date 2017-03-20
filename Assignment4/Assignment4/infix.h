@@ -23,8 +23,6 @@ public:
 	void clear();
 	void convertToPostFix();
 	std::string constructSym(char*);
-
-	bool precedence;
 	
 private:
 	std::string infx;
