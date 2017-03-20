@@ -22,6 +22,7 @@ public:
 	int getNumberOfOperands();
 	void clear();
 	void convertToPostFix();
+	std::string constructSym(char*);
 
 	bool precedence;
 	
@@ -29,7 +30,9 @@ private:
 	std::string infx;
 	std::string sym;
 	std::string pfx;
-	std::stack <std::string> pStack;
+	std::stack <char> pStack;
+	int operands;
+	int operators;
 
 };
 

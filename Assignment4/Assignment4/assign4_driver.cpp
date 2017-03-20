@@ -8,7 +8,6 @@
 
 using namespace std;
 
-
 //This helps with testing, do not modify.
 bool checkTest(string testName, string whatItShouldBe, string whatItIs) {
 
