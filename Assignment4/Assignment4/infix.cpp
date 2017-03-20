@@ -49,6 +49,7 @@ Infix::Infix(string exp) {
 }
 
 void Infix::setInfix(string exp) {
+	this->clear();
 	this->infx = exp;
 	operands = 0;
 	operators = 0;
@@ -82,6 +83,10 @@ void Infix::clear() {
 	operators = 0;
 	this->pfx = "";
 
+	while (pStack.empty() != true) {
+		pStack.pop();
+	}
+
 }
 
 void Infix::convertToPostFix() {
@@ -113,10 +118,11 @@ void Infix::convertToPostFix() {
 			j = i;
 			while (isdigit(sym[j])) {
 				this->pfx += sym[j];
-				pfx += ' ';
 				j++;
 			}
 			operands++;
+			pfx += ' ';
+			i = --j;
 		}
 		//operator check
 		if (sym[i] == '^') {
@@ -132,6 +138,7 @@ void Infix::convertToPostFix() {
 			operators++;
 		}
 	}
+	//Add spaces to pfx for output and append operators
 	 
 }
 
