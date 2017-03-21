@@ -22,7 +22,6 @@ public:
 	int getNumberOfOperands();
 	void clear();
 	void convertToPostFix();
-	std::string constructSym(char*);
 	
 private:
 	std::string infx;
